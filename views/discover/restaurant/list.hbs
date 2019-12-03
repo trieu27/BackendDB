@@ -1,0 +1,36 @@
+<h3 class="lbl-restaurant">Danh sách các nhà hàng
+    <a class="btn btn-info btn-add" href="/restaurant/create"><i class="fa fa-plus"></i> Thêm mới</a>
+    <a class="btn btn-primary btn-back" href="/dashboard"> Trở về</a></h3>
+
+<table class="table table-bordered table-dark table-hover tbl-restaurant">
+    <thead>
+        <tr>
+            <th class="name-restaurant">Tên nhà hàng</th>
+            <th>Thông Tin</th>
+            <th>Loại</th>
+            <th>Đường dẫn ảnh 1</th>
+            <th>Đường dẫn ảnh 2</th>
+            <th class="detail">Mô tả</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.Info}}</td>
+            <td>{{this.Loai}}</td>
+            <td>{{this.img_url1}}</td>
+            <td>{{this.img_url2}}</td>
+            <td>{{this.detail}}</td>
+            <td>
+                <a class="btn btn-primary" href="/restaurant/modify/{{this._id}}"><i class="fa fa-pencil fa-lg"
+                        aria-hidden="true"></i> Sửa</a>
+                <a class="btn btn-success" href="/restaurant/delete/{{this._id}}"
+                    onclick="return confirm('Bạn muốn xóa bản ghi này ?');"><i class="fa fa-trash fa-lg"
+                        aria-hidden="true"></i> Xóa</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

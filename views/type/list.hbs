@@ -1,0 +1,30 @@
+<h3 class="lbl-type">Các loại bản ghi
+    <a class="btn btn-info btn-add" href="/type/create"><i class="fa fa-plus"></i> Thêm mới</a>
+    <a class="btn btn-primary btn-back" href="/dashboard"> Trở về</a></h3>
+
+<table class="table table-bordered table-dark table-hover tbl-type">
+    <thead>
+        <tr>
+            <th>Mã Loại</th>
+            <th>Tên Loại</th>
+            <th>Bảng</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.maLoai}}</td>
+            <td>{{this.tenLoai}}</td>
+            <td>{{this.dependent}}</td>
+            <td>
+                <a class="btn btn-primary" href="/type/modify/{{this._id}}"><i class="fa fa-pencil fa-lg"
+                        aria-hidden="true"></i> Sửa</a>
+                <a class="btn btn-success" href="/type/delete/{{this._id}}"
+                    onclick="return confirm('Bạn muốn xóa bản ghi này ?');"><i class="fa fa-trash fa-lg"
+                        aria-hidden="true"></i> Xóa</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

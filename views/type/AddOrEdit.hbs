@@ -1,0 +1,32 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/type" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{type._id}}">
+    <div class="form-group">
+        <label>Mã loại :</label>
+        <input type="text" class="form-control" name="maLoai" placeholder="Nhập mã" value="{{type.maLoai}}">
+        <div class="text-danger">
+            {{type.maLoaiError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Tên loại :</label>
+        <input type="text" class="form-control" name="tenLoai" placeholder="Nhập tên" value="{{type.tenLoai}}">
+        <div class="text-danger">
+            {{type.tenLoaiError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Bảng :</label>
+        <select name="dependent" class="form-control">
+            {{#each nameCollection}}
+            <option>{{this.tenBang}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Xác nhận</button>
+        <a class="btn btn-success" href="/type/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Trở về</a>
+    </div>
+</form>

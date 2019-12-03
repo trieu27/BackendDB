@@ -1,0 +1,41 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/entertainment" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{entertainment._id}}">
+    <div class="form-group">
+        <label>Tên đầy đủ :</label>
+        <input type="text" class="form-control" name="Name" placeholder="Nhập tên" value="{{entertainment.Name}}">
+        <div class="text-danger">
+            {{entertainment.NameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Thông Tin :</label>
+        <input type="text" class="form-control" name="Info" placeholder="Nhập thông tin" value="{{entertainment.Info}}">
+        <div class="text-danger">
+            {{entertainment.InfoError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Loại :</label>
+        <select class="form-control" name="Loai">
+            {{#each entertainmentType}}
+            <option>{{this.maLoai}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Đường dẫn ảnh :</label>
+        <input type="text" class="form-control" name="img_url" placeholder="Nhập đường dẫn"
+            value="{{entertainment.img_url}}">
+    </div>
+    <div class="form-group">
+        <label>Mô tả :</label>
+        <input type="text" class="form-control" name="detail" placeholder="Nhập mô tả" value="{{entertainment.detail}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Xác nhận</button>
+        <a class="btn btn-success" href="/entertainment/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Trở về</a>
+    </div>
+</form>

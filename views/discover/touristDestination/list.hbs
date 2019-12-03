@@ -1,0 +1,34 @@
+<h3 class="lbl-destination">Thông tin về điểm du lịch tại Hải Phòng
+    <a class="btn btn-info btn-add" href="/touristDestination/create"><i class="fa fa-plus"></i> Thêm mới</a>
+    <a class="btn btn-primary btn-back" href="/dashboard"> Trở về</a>
+</h3>
+<table class="table table-bordered table-dark table-hover tbl-destination">
+    <thead>
+        <tr>
+            <th class="name">Tên đầy đủ</th>
+            <th>Thông Tin</th>
+            <th>Loại</th>
+            <th>Đường dẫn ảnh</th>
+            <th class="detail">Mô tả</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.Info}}</td>
+            <td>{{this.Loai}}</td>
+            <td>{{this.img_url}}</td>
+            <td>{{this.detail}}</td>
+            <td>
+                <a class="btn btn-primary" href="/touristDestination/modify/{{this._id}}"><i class="fa fa-pencil fa-lg"
+                        aria-hidden="true"></i> Sửa</a>
+                <a class="btn btn-success" href="/touristDestination/delete/{{this._id}}"
+                    onclick="return confirm('Bạn muốn xóa bản ghi này ?');"><i class="fa fa-trash fa-lg"
+                        aria-hidden="true"></i> Xóa</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

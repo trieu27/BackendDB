@@ -1,0 +1,34 @@
+<h3 class="lbl-entertainment">Các khu vui chơi và rạp chiếu phim
+    <a class="btn btn-info btn-add" href="/entertainment/create"><i class="fa fa-plus"></i> Thêm mới</a>
+    <a class="btn btn-primary btn-back" href="/dashboard"> Trở về</a></h3>
+
+<table class="table table-bordered table-dark table-hover tbl-entertainment">
+    <thead>
+        <tr>
+            <th class="name-entertainment">Tên đầy đủ</th>
+            <th class="info-entertainment">Thông Tin</th>
+            <th>Loại</th>
+            <th>Đường dẫn ảnh</th>
+            <th class="detail">Mô tả</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.Info}}</td>
+            <td>{{this.Loai}}</td>
+            <td>{{this.img_url}}</td>
+            <td>{{this.detail}}</td>
+            <td>
+                <a class="btn btn-primary" href="/entertainment/modify/{{this._id}}"><i class="fa fa-pencil fa-lg"
+                        aria-hidden="true"></i> Sửa</a>
+                <a class="btn btn-success" href="/entertainment/delete/{{this._id}}"
+                    onclick="return confirm('Bạn muốn xóa bản ghi này ?');"><i class="fa fa-trash fa-lg"
+                        aria-hidden="true"></i> Xóa</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

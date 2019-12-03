@@ -1,0 +1,40 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/hotel" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{hotel._id}}">
+    <div class="form-group">
+        <label>Tên khách sạn :</label>
+        <input type="text" class="form-control" name="Name" placeholder="Nhập tên" value="{{hotel.Name}}">
+        <div class="text-danger">
+            {{hotel.NameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Thông Tin :</label>
+        <input type="text" class="form-control" name="Info" placeholder="Nhập thông tin" value="{{hotel.Info}}">
+        <div class="text-danger">
+            {{hotel.InfoError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Loại :</label>
+        <select class="form-control" name="Loai">
+            {{#each hotelType}}
+            <option>{{this.maLoai}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class=" form-group">
+        <label>Đường dẫn ảnh :</label>
+        <input type="text" class="form-control" name="img_url" placeholder="Nhập đường dẫn" value="{{hotel.img_url}}">
+    </div>
+    <div class="form-group">
+        <label>Mô tả :</label>
+        <input type="text" class="form-control" name="detail" placeholder="Nhập mô tả" value="{{hotel.detail}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Xác nhận</button>
+        <a class="btn btn-success" href="/hotel/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Trở về</a>
+    </div>
+</form>

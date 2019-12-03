@@ -1,0 +1,41 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/HaiPhong" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{HaiPhong._id}}">
+    <div class="form-group">
+        <label>Tên đầy đủ :</label>
+        <input type="text" class="form-control" name="Name" placeholder="Nhập tên" value="{{HaiPhong.Name}}">
+        <div class="text-danger">
+            {{HaiPhong.NameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Thông Tin :</label>
+        <input type="text" class="form-control" name="Info" placeholder="Nhập thông tin" value="{{HaiPhong.Info}}">
+        <div class="text-danger">
+            {{HaiPhong.InfoError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Loại :</label>
+        <select class="form-control" name="Loai">
+            {{#each hpType}}
+            <option>{{this.maLoai}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Đường dẫn ảnh :</label>
+        <input type="text" class="form-control" name="img_url" placeholder="Nhập đường dẫn"
+            value="{{HaiPhong.img_url}}">
+    </div>
+    <div class="form-group">
+        <label>Mô tả :</label>
+        <input type="text" class="form-control" name="detail" placeholder="Nhập mô tả" value="{{HaiPhong.detail}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Xác nhận</button>
+        <a class="btn btn-success" href="/HaiPhong/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Trở về</a>
+    </div>
+</form>

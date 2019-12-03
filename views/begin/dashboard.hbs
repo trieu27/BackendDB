@@ -1,0 +1,231 @@
+<h3 class="label-dashboard">Chọn một bảng</h3>
+
+
+<table class="table table-bordered table-dark table-hover tbl-dashboard">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên bảng</th>
+            <th class="label-record">Số bản ghi hiện có</th>
+            <th>Bản ghi mới nhất</th>
+            <th>Bản ghi cũ nhất</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="number">1</td>
+            <td><a class="btn btn-primary" href="/HaiPhong/list"><i class="fa fa-database"></i> Giới thiệu chung về
+                    Hải Phòng</a></td>
+            <td class="number">{{hpCount}}</td>
+            {{#each hpGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each hpGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">2</td>
+            <td><a class="btn btn-primary" href="/touristDestination/list"><i class="fa fa-database"></i> Các điểm du
+                    lịch</a></td>
+            <td class="number">{{destinationCount}}</td>
+            {{#each destinationGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each destinationGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">3</td>
+            <td><a class="btn btn-primary" href="/tour/list"><i class="fa fa-database"></i> Các Tour du lịch</a></td>
+            <td class="number">{{tourCount}}</td>
+            {{#each tourGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each tourGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">4</td>
+            <td><a class="btn btn-primary" href="/experience/list"><i class="fa fa-database"></i> Các trải nghiệm du
+                    lịch</a></td>
+            <td class="number">{{experienceCount}}</td>
+            {{#each experienceGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each experienceGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">5</td>
+            <td><a class="btn btn-primary" href="/event/list"><i class="fa fa-database"></i> Các sự kiện</a></td>
+            <td class="number">{{eventCount}}</td>
+            {{#each eventGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each eventGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">6</td>
+            <td><a class="btn btn-primary" href="/shopping/list"><i class="fa fa-database"></i> Các địa điểm mua
+                    sắm</a></td>
+            <td class="number">{{shoppingCount}}</td>
+            {{#each shoppingGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each shoppingGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">7</td>
+            <td><a class="btn btn-primary" href="/transport/list"><i class="fa fa-database"></i> Các phương tiện di
+                    chuyển</a></td>
+            <td class="number">{{transportCount}}</td>
+            {{#each transportGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each transportGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">8</td>
+
+            <td><a class="btn btn-primary" href="/atm/list"><i class="fa fa-database"></i> Các cây ATM</a></td>
+            <td class="number">{{atmCount}}</td>
+            {{#each atmGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each atmGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">9</td>
+            <td><a class="btn btn-primary" href="/cuisine/list"><i class="fa fa-database"></i> Khám phá ẩm thực</a>
+            </td>
+            <td class="number">{{cuisineCount}}</td>
+            {{#each cuisineGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each cuisineGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">10</td>
+            <td><a class="btn btn-primary" href="/restaurant/list"><i class="fa fa-database"></i> Hệ thống nhà
+                    hàng</a></td>
+            <td class="number">{{restaurantCount}}</td>
+            {{#each restaurantGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each restaurantGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">11</td>
+            <td><a class="btn btn-primary" href="/hotel/list"><i class="fa fa-database"></i> Khách sạn</a></td>
+            <td class="number">{{hotelCount}}</td>
+            {{#each hotelGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each hotelGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">12</td>
+            <td><a class="btn btn-primary" href="/entertainment/list"><i class="fa fa-database"></i> Khu vui chơi và
+                    rạp chiếu phim</a></td>
+            <td class="number">{{entertainmentCount}}</td>
+            {{#each entertainmentGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each entertainmentGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">13</td>
+            <td><a class="btn btn-primary" href="/customerSupport/list"><i class="fa fa-database"></i> Dịch vụ hỗ
+                    trợ du khách</a></td>
+            <td class="number">{{customerCount}}</td>
+            {{#each customerGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each customerGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">14</td>
+            <td><a class="btn btn-primary" href="/review/list"><i class="fa fa-database"></i> Đánh giá của du
+                    khách</a></td>
+            <td class="number">{{reviewCount}}</td>
+            {{#each reviewGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each reviewGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">15</td>
+            <td><a class="btn btn-primary" href="/serai/list"><i class="fa fa-database"></i> Trạm dừng nghỉ</a></td>
+            <td class="number">{{seraiCount}}</td>
+            {{#each seraiGetNewest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+
+            {{#each seraiGetOldest}}
+            <td>{{this.Name}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">16</td>
+            <td><a class="btn btn-primary" href="/type/list"><i class="fa fa-database"></i> Type</a></td>
+            <td class="number">{{typeCount}}</td>
+            {{#each typeGetNewest}}
+            <td>{{this.tenLoai}}</td>
+            {{/each}}
+
+            {{#each typeGetOldest}}
+            <td>{{this.tenLoai}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class="number">17</td>
+            <td><a class="btn btn-primary" href="/users/list"><i class="fa fa-database"></i> User</a></td>
+            <td class="number">{{userCount}}</td>
+            {{#each userGetNewest}}
+            <td>{{this.name}}</td>
+            {{/each}}
+
+            {{#each userGetOldest}}
+            <td>{{this.name}}</td>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>

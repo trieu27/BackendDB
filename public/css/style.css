@@ -1,0 +1,226 @@
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  /* Everything but the jumbotron gets side spacing for mobile first views */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Custom page header */
+  .header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px; /* Make the masthead heading the same height as the navigation */
+  }
+  
+  /* Custom page footer */
+  .footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  /* Customize container */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 730px;
+    }
+  }
+  .container-narrow > hr {
+    margin: 30px 0;
+  }
+  
+  /* Main marketing message and sign up button */
+  .jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+  }
+  
+  /* Supporting marketing content */
+  .marketing {
+    margin: 40px 0;
+  }
+  .marketing p + h4 {
+    margin-top: 28px;
+  }
+  
+  /* Responsive: Portrait tablets and up */
+  @media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .header {
+      margin-bottom: 30px;
+    }
+    .jumbotron {
+      border-bottom: 0;
+    }
+  }
+    .page-header{
+margin-top: 0;
+  }
+  footer{
+      margin-top: 40px;
+  }
+
+
+
+  .login{
+    width: 350px;
+  }
+  .register{
+    width: 390px;
+  }
+  .label-record{
+    min-width: 150px;
+  }
+  .number{
+    text-align: center;
+  }
+  .lbl-logout{
+margin-right: -70px;
+  }
+  .lbl-dash{
+    margin-right: -10px;
+  }
+  .lbl-infoHP,
+  .lbl-experience{
+    margin-left: -150px;
+    font-size: 29px;
+  }
+  .lbl-destination,
+  .lbl-tour,
+  .lbl-event,
+  .lbl-atm,
+  .lbl-restaurant{
+    margin-left: -250px;
+    font-size: 29px;
+  }
+  .lbl-shopping{
+    margin-left: -210px;
+    font-size: 29px;
+  }
+  .lbl-transport{
+    margin-left: -255px;
+    font-size: 29px;
+  }
+  .lbl-cuisine{
+    margin-left: -220px;
+    font-size: 29px;
+  }
+  .lbl-hotel{
+    margin-left: -155px;
+    font-size: 29px;
+  }
+  .lbl-entertainment,
+  .lbl-service{
+    margin-left: -200px;
+    font-size: 29px;
+  }
+  .lbl-review,
+  .lbl-serai,
+  .lbl-type,
+  .lbl-user{
+    margin-left: -80px;
+    font-size: 29px;
+  }
+  .tbl-dashboard,
+  .tbl-review,
+  .tbl-serai,
+  .tbl-type,
+  .tbl-user{
+    margin-left: -80px;
+  }
+ .tbl-introduce,
+ .tbl-experience{
+   margin-left: -150px;
+ }
+ .tbl-destination,
+ .tbl-tour,
+ .tbl-event,
+ .tbl-atm,
+ .tbl-restaurant{
+   margin-left: -250px;
+ }
+ .tbl-shopping{
+   margin-left: -210px;
+ }
+ .tbl-transport{
+  margin-left: -255px;
+}
+.tbl-cuisine{
+  margin-left: -220px;
+}
+.tbl-hotel{
+  margin-left: -155px;
+}
+.tbl-entertainment,
+.tbl-service{
+  margin-left: -200px;
+}
+  .name{
+    min-width: 91px;
+  }
+  .hpInfo{
+    min-width: 350px;
+  }
+  .detail{
+    min-width: 75px;
+  }
+.btn-add{
+  margin-left: 120px;
+}
+.btn-back{
+  margin-left: 5px;
+}
+.btn-create{
+  margin-left: 55px;
+}
+.name-experience{
+  min-width: 122px;
+}
+.info-experience,
+.info-entertainment{
+  min-width: 290px;
+}
+.name-event{
+  min-width: 96px;
+}
+.info-event,
+.info-service{
+  min-width: 230px;
+}
+.name-shopping{
+  min-width: 103px;
+}
+.info-atm{
+  min-width: 160px;
+}
+.name-cuisine,
+.name-restaurant,
+.name-entertainment,
+.name-service,
+.name-serai{
+  min-width: 120px;
+}
+.date-review{
+  min-width: 120px;
+}

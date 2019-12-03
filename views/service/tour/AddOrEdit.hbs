@@ -1,0 +1,47 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/tour" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{tour._id}}">
+    <div class="form-group">
+        <label>Tên Tour :</label>
+        <input type="text" class="form-control" name="Name" placeholder="Nhập tên tour" value="{{tour.Name}}">
+        <div class="text-danger">
+            {{tour.NameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Thông Tin Tour :</label>
+        <input type="text" class="form-control" name="Info" placeholder="Nhập thông tin" value="{{tour.Info}}">
+        <div class="text-danger">
+            {{tour.InfoError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Loại :</label>
+        <select class="form-control" name="Loai">
+            {{#each tourType}}
+            <option>{{this.maLoai}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Chi tiết Tour :</label>
+        <input type="text" class="form-control" name="ChiTiet" placeholder="Nhập chi tiết" value="{{tour.ChiTiet}}">
+        <div class="text-danger">
+            {{tour.ChiTietError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Đường dẫn ảnh :</label>
+        <input type="text" class="form-control" name="img_url" placeholder="Nhập đường dẫn" value="{{tour.img_url}}">
+    </div>
+    <div class="form-group">
+        <label>Mô tả :</label>
+        <input type="text" class="form-control" name="detail" placeholder="Nhập mô tả" value="{{tour.detail}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Xác nhận</button>
+        <a class="btn btn-success" href="/tour/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Trở về</a>
+    </div>
+</form>

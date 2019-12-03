@@ -1,0 +1,40 @@
+<h3>{{viewTitle}}</h3>
+
+
+
+<form action="/users" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{client._id}}">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Nhập Name" value="{{client.name}}">
+        <div class="text-danger">
+            {{client.nameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Nhập Email" value="{{client.email}}">
+        <div class="text-danger">
+            {{client.emailError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" name="username" value="{{client.username}}" readonly>
+        <div class="text-danger">
+            {{client.usernameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" value="{{client.password}}">
+        <div class="text-danger">
+            {{client.passwordError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Xác nhận</button>
+        <a class="btn btn-success" href="/users/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Back</a>
+    </div>
+</form>

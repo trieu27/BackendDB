@@ -1,0 +1,44 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/review" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{review._id}}">
+    <div class="form-group">
+        <label>Tên người đánh giá :</label>
+        <input type="text" class="form-control" name="Name" placeholder="Nhập tên" value="{{review.Name}}">
+        <div class="text-danger">
+            {{review.NameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Loại :</label>
+        <select class="form-control" name="Loai">
+            {{#each reviewType}}
+            <option>{{this.maLoai}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Nội dung đánh giá :</label>
+        <input type="text" class="form-control" name="Comment" placeholder="Nhập nội dung" value="{{review.Comment}}">
+        <div class="text-danger">
+            {{review.CommentError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Ngày đánh giá :</label>
+        <input type="text" class="form-control" name="RatingDate" placeholder="Nhập ngày đánh giá"
+            value="{{review.RatingDate}}">
+        <div class="text-danger">
+            {{review.RatingDateError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Mô tả :</label>
+        <input type="text" class="form-control" name="detail" placeholder="Nhập mô tả" value="{{review.detail}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Xác nhận</button>
+        <a class="btn btn-success" href="/review/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Trở về</a>
+    </div>
+</form>

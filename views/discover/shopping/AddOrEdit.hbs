@@ -1,0 +1,46 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/shopping" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{shopping._id}}">
+    <div class="form-group">
+        <label>Tên địa điểm :</label>
+        <input type="text" class="form-control" name="Name" placeholder="Nhập tên" value="{{shopping.Name}}">
+        <div class="text-danger">
+            {{shopping.NameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Thông Tin :</label>
+        <input type="text" class="form-control" name="Info" placeholder="Nhập thông tin" value="{{shopping.Info}}">
+        <div class="text-danger">
+            {{shopping.InfoError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Loại :</label>
+        <select class="form-control" name="Loai">
+            {{#each shoppingType}}
+            <option>{{this.maLoai}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Đường dẫn ảnh 1 :</label>
+        <input type="text" class="form-control" name="img_url1" placeholder="Nhập đường dẫn"
+            value="{{shopping.img_url1}}">
+    </div>
+    <div class="form-group">
+        <label>Đường dẫn ảnh 2 :</label>
+        <input type="text" class="form-control" name="img_url2" placeholder="Nhập đường dẫn"
+            value="{{shopping.img_url2}}">
+    </div>
+    <div class="form-group">
+        <label>Mô tả :</label>
+        <input type="text" class="form-control" name="detail" placeholder="Nhập mô tả" value="{{shopping.detail}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Xác nhận</button>
+        <a class="btn btn-success" href="/shopping/list"><i class="fa fa-list-alt"></i> Xem toàn bộ</a>
+        <a class="btn btn-primary" href="/dashboard">Trở về</a>
+    </div>
+</form>
